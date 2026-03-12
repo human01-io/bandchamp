@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BandChamp",
+  "version": "0.0.1",
+  "description": "Supercharge your Bandcamp experience",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://*.bandcamp.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.bandcamp.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "BandChamp"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

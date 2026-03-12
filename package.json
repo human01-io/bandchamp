@@ -1,0 +1,19 @@
+{
+  "name": "bandchamp",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @bandchamp/pwa dev",
+    "build": "pnpm -r build",
+    "build:shared": "pnpm --filter @bandchamp/shared build",
+    "build:pwa": "pnpm --filter @bandchamp/pwa build",
+    "build:extension": "pnpm --filter @bandchamp/extension build",
+    "check": "pnpm -r check",
+    "lint": "pnpm -r lint"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
