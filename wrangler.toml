@@ -4,3 +4,4 @@ main = "packages/pwa/.svelte-kit/cloudflare/_worker.js"
 
 [assets]
 directory = "packages/pwa/.svelte-kit/cloudflare"
+binding = "ASSETS"
